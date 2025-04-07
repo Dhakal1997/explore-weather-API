@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Weather App </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    </head>
+    <body class="bg-info text-white">
+        <div class="text-center">
+        <h1 class="mt-5">Weather App </h1>
+
+        <form action="/" method="POST">
+            
+                
+            <input type="text" id="cityName" name="cityName" placeholder="City" class="form-control" >
+            <input tpe="text" id="stateName" name="stateName" value="CA" class="form-control">
+            <input tpe="text" id="countryName" name="countryName" value="US" class="form-control">
+            
+        </div>
+            <button>Find</button> <br>
+
+
+
+
+
+
+        </form> 
+        {% if data %} 
+        {{ data.main}}: {{ data.description}} <br>
+        <img src="https://openweathermap.org/img/wn/{{data.icon}}@2x.png"alt="Icon">
+        {{data.temperature}}
+        {% endif%}
+
+
+
+        </div>
+
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </body>
+</html>

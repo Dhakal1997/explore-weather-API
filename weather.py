@@ -9,7 +9,7 @@ api_key = os.getenv('API_KEY') # get API key from weatherapp
 # dedine a data class to structure weather information
 @dataclass
 class WeatherData:
-    main:str # primmary weather cahracterstic
+    main:str # primary weather cahracterstic
     description: str # detailed weather description
     icon: str
     temperature: float 
